@@ -1,7 +1,7 @@
-# Simple PowerShell script for Windows credential hunting without much garbage output.
-# PS C:\Users\matrix\Desktop> .\winPass.ps1
+# Simple PowerShell script for Windows credential hunting without much garbage output
+# PS C:\Users\matrix\Desktop> .\winPass.ps1 or just copy and past the code into the terminal
 
-# Make the necessary changes if you wish.
+# Make the necessary changes if you wish
 # \m/
 
 Get-ChildItem -Recurse -Include *.txt, *.ini, *.cfg, *.config, *.xml -ErrorAction SilentlyContinue | ForEach-Object {
