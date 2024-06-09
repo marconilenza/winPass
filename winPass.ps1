@@ -4,6 +4,7 @@
 # Make the necessary changes if you wish
 # \m/
 
+Set-Location \
 Get-ChildItem -Recurse -Include *.txt, *.ini, *.cfg, *.config, *.xml -ErrorAction SilentlyContinue | ForEach-Object {
     $filename = $_.FullName
 
