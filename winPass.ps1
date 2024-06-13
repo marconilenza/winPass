@@ -5,7 +5,7 @@
 # \m/
 
 Set-Location \
-Get-ChildItem -Recurse -Include *.txt, *.ini, *.cfg, *.config, *.xml -ErrorAction SilentlyContinue | ForEach-Object {
+Get-ChildItem -Recurse -Include *.txt, *.ini, *.cfg, *.config, *.xml, *.ps1 -ErrorAction SilentlyContinue | ForEach-Object {
     $filename = $_.FullName
 
     Select-String -Pattern "password" -Path $_.FullName -CaseSensitive -SimpleMatch -ErrorAction SilentlyContinue | ForEach-Object {
